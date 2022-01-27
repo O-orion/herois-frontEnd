@@ -1,3 +1,4 @@
+/* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 import { Hero } from './../hero.model';
 import { Component, OnInit } from '@angular/core';
 
@@ -15,7 +16,7 @@ export class HeroesComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+ 
+  ngOnInit(): void {}
 
 }
