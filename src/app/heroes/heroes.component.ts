@@ -1,3 +1,4 @@
+import { heroes } from './../heroes-list';
 /* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 import { Hero } from './../hero.model';
 import { Component, OnInit } from '@angular/core';
@@ -14,9 +15,16 @@ export class HeroesComponent implements OnInit {
     name:'José'
   }
 
+  listaHeroes = heroes;
+  selectedHero?: Hero;
+
   constructor() { }
 
- 
+
   ngOnInit(): void {}
+
+  onSelect(hero: Hero):void {
+    this.selectedHero = hero
+  }
 
 }

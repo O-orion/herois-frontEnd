@@ -1,3 +1,4 @@
+import { HeroDetail } from './hero-detail/hero-detail.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -11,6 +12,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     HeroesComponent,
+    HeroDetail
   ],
   imports: [
     BrowserModule,
