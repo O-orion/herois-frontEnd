@@ -1,7 +1,9 @@
+import { HeroService } from './../services/hero.service';
 import { heroes } from './../heroes-list';
 /* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 import { Hero } from './../hero.model';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-heroes',
@@ -18,10 +20,14 @@ export class HeroesComponent implements OnInit {
   listaHeroes = heroes;
   selectedHero?: Hero;
 
-  constructor() { }
+  constructor(private heroService: HeroService) { }
 
 
   ngOnInit(): void {}
+
+  getMyHeroes(){
+    this.heroService.getHeroes().subscribe(listHeroes => this.listaHeroes = listHeroes)
+  }
 
   onSelect(hero: Hero):void {
     this.selectedHero = hero
